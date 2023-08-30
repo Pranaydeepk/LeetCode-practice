@@ -3,7 +3,15 @@
 class Solution:
     def reverseWord(self, s):
         #your code here
-        return s[::-1]
+        i, j, reverse = 0, len(s) - 1, ''
+        s = list(s)
+        while i < j:
+            s[i], s[j] = s[j], s[i]
+            i += 1
+            j -= 1
+        for i in s:
+            reverse += i
+        return reverse
 
 
 #{ 
