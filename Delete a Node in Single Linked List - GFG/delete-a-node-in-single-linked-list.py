@@ -18,7 +18,7 @@ def delNode(head, k):
     while curr.next and count < k - 1:
         curr = curr.next
         count += 1
-    if curr.next is None or k == 0:
+    if curr.next is None:
         return head
     curr.next = curr.next.next
     return head
