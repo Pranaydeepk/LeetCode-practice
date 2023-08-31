@@ -1,6 +1,5 @@
 # your task is to complete this function
 # function should return new head pointer
-
 '''
 class node:
     def __init__(self):
@@ -10,11 +9,10 @@ class node:
 def delNode(head, k):
     if head is None:
         return None
-    
     # If k is 1, we need to delete the head node
     if k == 1:
         new_head = head.next
-        head.next = None
+        # head.next = None
         return new_head
 
     curr = head
