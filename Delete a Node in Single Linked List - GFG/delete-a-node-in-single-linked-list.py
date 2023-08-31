@@ -9,28 +9,19 @@ class node:
 def delNode(head, k):
     if head is None:
         return None
-    # If k is 1, we need to delete the head node
     if k == 1:
         new_head = head.next
         # head.next = None
         return new_head
-
     curr = head
     count = 1
     while curr.next and count < k - 1:
         curr = curr.next
         count += 1
-
-    # If k is greater than the number of nodes or negative, do nothing
-    if curr.next is None or k <= 0:
+    if curr.next is None or k == 0:
         return head
-
-    # Delete the k-th node
     curr.next = curr.next.next
-
     return head
-
-
 #{ 
  # Driver Code Starts
 # Node Class    
